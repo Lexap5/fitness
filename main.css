@@ -1,0 +1,313 @@
+:root {
+  --white: #f3f3f3;
+  --black: #2b3541;
+  --yellow: #fbf138;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1143px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.logo {
+  background: url(images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 97px;
+}
+
+.nav {
+  flex-grow: 1;
+  display: flex;
+  gap: 54px;
+  margin-left: 92px;
+}
+
+.nav-link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--dark);
+}
+
+.header-email {
+  display: flex;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--dark);
+  position: relative;
+}
+
+.header-email::before {
+  display: block;
+  content: "";
+  background-image: url(images/krug.svg);
+  height: 60px;
+  width: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 109px;
+  top: -7px;
+  z-index: -1;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+.hero-text {
+  flex-basis: 60%;
+  position: relative;
+}
+.hero-text h1 {
+  font-size: clamp(26px, 4.5vw, 48px);
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--dark);
+  padding-top: 15px;
+  padding-bottom: 6px;
+}
+
+.hero-indent {
+  margin-left: 90px;
+}
+
+.hero-sport {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 125%;
+  color: var(--dark);
+}
+
+.hero-fisicle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--dark);
+  margin-bottom: 40px;
+}
+
+.hero-btn {
+  width: 252px;
+  height: 64px;
+  background-color: var(--yellow);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--dark);
+  border: none;
+}
+
+.hero-bg {
+  height: clamp(493px, 50vw, 852px);
+  flex-basis: calc(40% - 20px);
+  background: linear-gradient(
+    90deg,
+    #fbf138 0%,
+    rgba(253, 249, 182, 0.45) 100%
+  );
+  opacity: 0.2;
+}
+
+.hero-img {
+  height: clamp(399px, 50vw, 800px);
+  position: absolute;
+  right: -10vw;
+  bottom: 0;
+}
+
+.hero-arrow {
+  display: block;
+  background-image: url(images/arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 52px;
+  min-height: 55px;
+  position: absolute;
+  bottom: 5px;
+}
+
+@media (max-width: 1500px) {
+  .hero-img {
+    right: -2vw;
+  }
+}
+@media (max-width: 1200px) {
+  .hero-img {
+    right: 5px;
+  }
+}
+
+/* Schedule */
+
+.schedule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 155px;
+}
+
+.schedule h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  color: var(--dark);
+}
+
+.schedule p {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 125%;
+  color: var(--dark);
+}
+
+.training-schedule {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-template-rows: 309px 73px 281px;
+  grid-template-areas: "a b c" "d b f" "d e f";
+}
+
+.training-schedule-item1 {
+  grid-area: a;
+  height: 309px;
+  width: 367px;
+  border: 1px solid rgba(43, 53, 65, 0.2);
+  padding: 2px 30px 20px 30px;
+  box-sizing: border-box;
+}
+.training-schedule-text1 {
+  display: block;
+  text-align: right;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #010101;
+  opacity: 0.7;
+  margin-bottom: 110px;
+}
+.training-schedule-img1 {
+  height: 65px;
+  width: 65px;
+}
+
+.training-schedule-head1 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 125%;
+  color: var(--dark);
+  margin-top: 42px;
+}
+
+.training-schedule-item2 {
+  grid-area: b;
+  height: 402px;
+  width: 366px;
+  border: 1px solid rgba(43, 53, 65, 0.2);
+  padding: 0px 30px 20px 30px;
+  box-sizing: border-box;
+}
+
+.training-schedule-text2 {
+  display: block;
+  text-align: right;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #010101;
+  opacity: 0.7;
+  margin-bottom: 190px;
+}
+.training-schedule-img2 {
+  height: 82px;
+  width: 42px;
+}
+
+.training-schedule-head2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 125%;
+  color: var(--dark);
+  margin-top: 42px;
+}
+
+.training-schedule-item3 {
+  grid-area: c;
+  height: 309px;
+  width: 367px;
+  border: 1px solid rgba(43, 53, 65, 0.2);
+  padding: 0px 30px 20px 30px;
+  box-sizing: border-box;
+}
+
+.training-schedule-text3 {
+  display: block;
+  text-align: right;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #010101;
+  opacity: 0.7;
+  margin-bottom: 130px;
+}
+.training-schedule-img3 {
+  height: 50px;
+  width: 91px;
+}
+
+.training-schedule-head3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 125%;
+  color: var(--dark);
+  margin-top: 42px;
+}
+
+.training-schedule-item4 {
+  grid-area: d;
+}
+.training-schedule-item5 {
+  grid-area: e;
+}
+.training-schedule-item6 {
+  grid-area: f;
+}
+
+@media (max-width: 1000px) {
+  .training-schedule {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 224px);
+    grid-template-areas: "a b" "c d" "e f";
+  }
+}
